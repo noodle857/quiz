@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz de Filmes e Séries</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="decoracao">✦</div>
+    <div class="decoracao2">✧</div>
+
+    <!-- INÍCIO -->
+    <div id="inicio" class="tela">
+
+        <div class="caixa">
+
+            <h1>Quiz de Filmes<br>e Séries</h1>
+
+            <p>
+                Teste seus conhecimentos sobre filmes,
+                séries e personagens.
+            </p>
+
+            <div class="info">
+                <span>10 perguntas</span>
+                <span>20 segundos</span>
+            </div>
+
+            <button onclick="iniciarQuiz()">
+                Começar Quiz
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- QUIZ -->
+    <div id="quiz" class="tela escondido">
+
+        <div class="quiz">
+
+            <div class="topo">
+
+                <span id="perguntaNumero">
+                    Pergunta 1 de 10
+                </span>
+
+                <span>
+                    Pontos: <b id="pontos">0</b>
+                </span>
+
+            </div>
+
+
+            <div class="barra">
+                <div id="progresso"></div>
+            </div>
+
+
+            <div class="tempo">
+                Tempo: <b id="tempo">20</b>s
+            </div>
+
+
+            <div class="pergunta">
+
+                <small id="categoria">
+                    FILMES
+                </small>
+
+                <h2 id="textoPergunta">
+                    Pergunta
+                </h2>
+
+                <div id="respostas"></div>
+
+            </div>
+
+
+            <button
+                id="proximo"
+                class="botao-proximo"
+                onclick="proximaPergunta()"
+                disabled>
+                Próxima
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- RESULTADO -->
+    <div id="resultado" class="tela escondido">
+
+        <div class="caixa resultado">
+
+            <h1>Resultado</h1>
+
+            <p>Você acertou:</p>
+
+            <div class="numero">
+                <span id="acertos">0</span>/10
+            </div>
+
+            <p>
+                Pontuação:
+                <b id="pontuacaoFinal">0</b>
+            </p>
+
+            <button onclick="reiniciar()">
+                Jogar novamente
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

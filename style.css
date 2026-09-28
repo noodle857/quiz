@@ -1,0 +1,369 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: #100d18;
+
+    color: white;
+
+    min-height: 100vh;
+}
+
+
+/* decoração simples */
+
+.decoracao {
+    position: fixed;
+
+    top: 50px;
+    left: 8%;
+
+    color: #8d65d9;
+
+    font-size: 30px;
+
+    opacity: 0.5;
+}
+
+.decoracao2 {
+    position: fixed;
+
+    right: 10%;
+    bottom: 15%;
+
+    color: #4f8edb;
+
+    font-size: 25px;
+
+    opacity: 0.5;
+}
+
+
+/* telas */
+
+.tela {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.escondido {
+    display: none;
+}
+
+
+/* caixa inicial */
+
+.caixa {
+    width: 100%;
+    max-width: 550px;
+
+    background: #191522;
+
+    border: 1px solid #42365c;
+
+    padding: 45px 35px;
+
+    text-align: center;
+
+    box-shadow: 8px 8px 0 #241d32;
+}
+
+h1 {
+    font-size: 42px;
+
+    color: #b08cff;
+
+    margin-bottom: 20px;
+}
+
+.caixa p {
+    color: #aaa4b4;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+
+/* informações */
+
+.info {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-bottom: 30px;
+}
+
+.info span {
+    background: #211c2c;
+
+    border: 1px solid #393047;
+
+    padding: 10px 15px;
+
+    color: #b9b2c4;
+
+    font-size: 13px;
+}
+
+
+/* botões */
+
+button {
+    background: #865bd1;
+
+    color: white;
+
+    border: none;
+
+    padding: 14px 25px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #9d73e5;
+}
+
+
+/* quiz */
+
+.quiz {
+    width: 100%;
+
+    max-width: 750px;
+}
+
+.topo {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 12px;
+
+    color: #aaa4b4;
+
+    font-size: 14px;
+}
+
+.topo b {
+    color: #b08cff;
+}
+
+
+/* barra */
+
+.barra {
+    width: 100%;
+
+    height: 5px;
+
+    background: #282331;
+
+    margin-bottom: 15px;
+}
+
+#progresso {
+    height: 100%;
+
+    width: 0%;
+
+    background: #865bd1;
+
+    transition: 0.3s;
+}
+
+
+/* tempo */
+
+.tempo {
+    text-align: right;
+
+    color: #aaa4b4;
+
+    font-size: 13px;
+
+    margin-bottom: 10px;
+}
+
+.tempo b {
+    color: white;
+}
+
+
+/* pergunta */
+
+.pergunta {
+    background: #191522;
+
+    border: 1px solid #42365c;
+
+    padding: 30px;
+
+    box-shadow: 6px 6px 0 #241d32;
+}
+
+.pergunta small {
+    color: #6fa8e8;
+
+    letter-spacing: 1px;
+
+    font-size: 11px;
+}
+
+.pergunta h2 {
+    font-size: 24px;
+
+    line-height: 1.4;
+
+    margin: 15px 0 25px;
+
+    font-weight: normal;
+}
+
+
+/* respostas */
+
+.resposta {
+    width: 100%;
+
+    display: block;
+
+    text-align: left;
+
+    background: #211c2c;
+
+    border: 1px solid #393047;
+
+    color: #ddd8e4;
+
+    margin-bottom: 10px;
+
+    padding: 14px;
+
+    font-size: 14px;
+}
+
+.resposta:hover {
+    background: #292239;
+
+    border-color: #865bd1;
+}
+
+
+/* correta e errada */
+
+.resposta.correta {
+    background: #193526;
+
+    border-color: #4caf79;
+
+    color: #8ee0ad;
+}
+
+.resposta.errada {
+    background: #3a2028;
+
+    border-color: #c75c6c;
+
+    color: #ef9aa5;
+}
+
+
+/* botão próxima */
+
+.botao-proximo {
+    margin-top: 18px;
+
+    float: right;
+
+    background: transparent;
+
+    border: 1px solid #865bd1;
+
+    color: #b08cff;
+}
+
+.botao-proximo:hover {
+    background: #865bd1;
+
+    color: white;
+}
+
+.botao-proximo:disabled {
+    opacity: 0.4;
+
+    cursor: not-allowed;
+}
+
+
+/* resultado */
+
+.resultado h1 {
+    margin-bottom: 15px;
+}
+
+.numero {
+    font-size: 65px;
+
+    color: #b08cff;
+
+    margin-bottom: 15px;
+}
+
+.resultado p {
+    margin-bottom: 15px;
+}
+
+.resultado button {
+    margin-top: 10px;
+}
+
+
+/* celular */
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .caixa {
+        padding: 30px 20px;
+    }
+
+    .info {
+        flex-direction: column;
+    }
+
+    .pergunta {
+        padding: 22px;
+    }
+
+    .pergunta h2 {
+        font-size: 20px;
+    }
+
+    .topo {
+        font-size: 12px;
+    }
+}
